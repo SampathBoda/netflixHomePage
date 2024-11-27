@@ -5,3 +5,9 @@ spark = SparkSession.builder \
 .config("spark.sql.extensions", "delta.sql.DeltaSparkSessionExtensions") \
 .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog") \
 .getOrCreate()
+
+
+
+import os
+os.environ['JAVA_HOME'] = '/usr/lib/jvm/java-11-openjdk-amd64'
+os.environ['SPARK_HOME'] = '/usr/local/lib/python3.10/dist-packages/pyspark'
